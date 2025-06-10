@@ -71,12 +71,12 @@ A REST API for managing fitness class bookings built with Django, Django REST Fr
 
 2. **POST /api/book/**
    - Books a class
-   - Request body: `{ "fitness_class": "uuid", "client_name": "string", "client_email": "string" }`
+   - Request body: `{ "class_id": "uuid", "client_name": "string", "client_email": "string" }`
    - Example:
      ```bash
      curl -X POST "http://localhost:8000/api/book/" \
      -H "Content-Type: application/json" \
-     -d '{"fitness_class": "uuid-from-get-classes", "client_name": "ashish", "client_email": "ashking201299@gmail.com"}'
+     -d '{"class_id": "uuid-from-get-classes", "client_name": "ashish", "client_email": "ashking201299@gmail.com"}'
      ```
 
 3. **GET /api/bookings/**
