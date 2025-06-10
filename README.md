@@ -112,7 +112,43 @@ this is Loom video is in my video folder.
 - `manage.py`: Django management script
 - `README.md`: Project documentation
 
-## Project Structure
+## Credentials
    # Admin Credentials
 - `username`: admin
 - `password`: admin@123
+
+## For Sample data
+ - Please open the input_data.py file and u can also modify the data according to u, and these are the steps which can create booking api using terminal
+
+ '''bash
+      python manage.py shell
+      
+      from datetime import datetime, timedelta
+
+      import pytz
+
+      from bookings.models import FitnessClass
+
+      ist = pytz.timezone("Asia/Kolkata")
+
+      FitnessClass.objects.create(
+         name="Morning Yoga",
+         datetime_ist=ist.localize(datetime.now() + timedelta(days=1, hours=6)),
+         instructor="Shrishti",
+         available_slots=10,
+      )
+
+      FitnessClass.objects.create(
+         name="Zumba Blast",
+         datetime_ist=ist.localize(datetime.now() + timedelta(days=2, hours=8)),
+         instructor="Arjun",
+         available_slots=15,
+      )
+
+      FitnessClass.objects.create(
+         name="Evening Pilates",
+         datetime_ist=ist.localize(datetime.now() + timedelta(days=3, hours=18)),
+         instructor="Neha",
+         available_slots=8,
+      )
+ '''
