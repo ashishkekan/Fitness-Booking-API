@@ -17,12 +17,12 @@ A REST API for managing fitness class bookings built with Django, Django REST Fr
    - Create a project directory and place the provided files in the correct structure:
      ```
      fitness_studio/
-     ├── bookings/
+     ├── fitness_studio/
      │   ├── __init__.py
      │   ├── settings.py
      │   ├── urls.py
      │   └── wsgi.py
-     ├── fitness_studio/
+     ├── bookings/
      │   ├── __init__.py
      │   ├── admin.py
      │   ├── apps.py
